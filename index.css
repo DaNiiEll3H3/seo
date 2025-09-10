@@ -1,0 +1,72 @@
+.contenedor {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 200px;
+border: 1px solid #ccc;
+}
+.item1 {
+background-color: lightblue;
+width: 100px;
+height: 100px;
+margin: 10px;
+} 
+.item2 {
+background-color: lightgreen;
+width: 100px;
+height: 100px;
+margin: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Contenedor del menú */
+nav {
+  background-color: #333;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; /* Distribuye los enlaces */
+}
+
+li {
+  position: relative; /* Necesario para el submenu */
+}
+
+a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: #444;
+}
+
+/* Submenú */
+.submenu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  flex-direction: column; /* Vertical */
+  min-width: 150px;
+}
+
+.submenu a {
+  padding: 10px;
+}
+
+/* Mostrar submenu al pasar el mouse */
+li:hover .submenu {
+  display: flex;
+}
